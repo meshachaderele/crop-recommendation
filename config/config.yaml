@@ -1,0 +1,23 @@
+train_data: "../data/train.csv"
+test_data: "../data/test.csv"
+model_file: "../models/logistic_model_nodecoder.pkl"
+scores_file: "../outputs/scores/model_scores.json"
+predictions_file: "../outputs/predictions/predictions.csv"
+test_size: 0.2
+random_state: 42
+features:
+  - 'N'
+  - 'P'
+  - 'K'
+  - 'temperature'
+  - 'humidity'
+  - 'ph'
+  - 'rainfall'
+target: 'crop'
+
+model:
+  name: 'logistic_regression'
+  params:
+    C: 1.0
+    max_iter: 2000
+    random_state: 42
